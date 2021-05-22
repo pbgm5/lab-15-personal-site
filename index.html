@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Pattaya&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <body bgcolor="#342E6A">
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Hi, I'm Priya</h1>
+        <h5>I'm a college student at City Tech</h5>
+      </div>
+    </div>
+    <div id="navbar">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About me</a>
+      <a href="myportfolio.html">My Portfolio</a>
+      <a href="contect.html">Contact</a>
+      </div>
+    <div class="stuff" id="first"><h2>About me</h2></div>
+    <div class="stuff" id="second"><h3>My Portfolio</h3></div>
+    <div class="stuff" id="third"><h4>Contact</h4></div>
+
+    <canvas id="sketch" width="480" height="720"></canvas>
+       <script>
+       document.addEventListener('DOMContentLoaded', main);
+
+       var sketch;
+       var context;
+       var circle = {'x':0, 'y':100, 'r':25};
+       var dx = 2; //delta x -- how much x changes each time we run animate()
+       var dy = 2;
+       var fps = 10;
+
+       function main() {
+         sketch = document.getElementById('sketch');
+   			context = sketch.getContext("2d");
+         circle = {'x':25, 'y':sketch.offsetHeight/2, 'r':25};
+         setInterval(animate, fps);
+       }
+
+       function animate() {
+         context.clearRect(0, 0, sketch.offsetWidth, sketch.offsetHeight);
+         draw_circle(circle.x, circle.y, circle.r);
+         circle.x = circle.x + dx;
+         circle.y = circle.y + dy;
+         if (circle.x > sketch.offsetWidth - dx - circle.r){
+           dx = dx * -1
+         }
+         if (circle.x < circle.r - dx){
+           dx = 2
+         }
+         if (circle.y > sketch.offsetHeight - dy - circle.r){
+           dy = dy * -1
+         }
+         if (circle.y < circle.r - dy){
+           dy = 2
+         }
+       }
+
+       function draw_circle(x, y, r) {
+         context.beginPath();
+   		  context.arc(x, y, r, 0, 2 * Math.PI, true);
+   		  context.closePath();
+   		  context.fill();
+       }
+       </script>
+     </body>
+   </html>

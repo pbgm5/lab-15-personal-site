@@ -1,0 +1,94 @@
+body, html {
+    height:100%;
+    font-family: 'Goblin One', cursive;
+    font-weight: 700;
+    color: black;
+}
+
+h1, h2, h3, h4,h5,h6 {
+  font-family: 'Pattaya', sans-serif;
+}
+.hero-image {
+  background-image:url("ji.jpg");
+  height: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+div.stuff {
+  width: 250px;
+  word-wrap: break-word;
+  overflow: auto;
+  text-align: dashed;
+  border-width: 1px;
+  border-style: dotted;
+  border-color: blue;
+  float: left;
+  margin: 175px;
+  padding: 5px;
+}
+div#first {
+  background-color: #F21B54;
+}
+
+div#second {
+  background-color: #244673;
+}
+
+div#third {
+  background-color: #4A88D9;
+
+}
+
+div#fourth {
+  background-color: #4A88D9;
+
+}
+
+div#fifth {
+  background-color: #172940;
+
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #040207;
+}
+
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #F2D129;
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: blue;
+  background-color: white;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
