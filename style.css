@@ -10,6 +10,7 @@ h1, h2, h3, h4,h5,h6 {
 }
 .hero-image {
   background-image:url("ji.jpg");
+
   height: 30%;
   background-position: center;
   background-repeat: no-repeat;
